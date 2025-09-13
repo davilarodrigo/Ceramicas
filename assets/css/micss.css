@@ -1,0 +1,29 @@
+/* Aplica blanco y negro a imágenes de productos sin stock */
+.product-card.no-stock img {
+  filter: grayscale(75%);
+  opacity: 0.7;
+}
+
+/* Elimina el margen extra si no hay precio */
+.product-card.no-stock .card-text {
+  font-weight: bold;
+  color: #a00; /* opcional, para resaltar */
+}
+
+.product-card.no-stock {
+  order: 999; /* empuja al final */
+}
+
+/* Por defecto: ocultar bloque de "sin stock" */
+.product-card .no-stock-info {
+  display: none;
+}
+
+/* Cuando la card está marcada como no-stock */
+.product-card.no-stock .price-text {
+  display: none; /* oculta el precio */
+}
+
+.product-card.no-stock .no-stock-info {
+  display: block; /* muestra el bloque de aviso */
+}
